@@ -1,18 +1,20 @@
-let count = 10;
-let num=''
-for(i=1; i<count; i++)
+let count = 4;
+let empty=''
+let num=1
+for(i=1; i<=count; i++)
 { 
     for(j=i; j<count; j++)
     {
-        num+=" "
+        empty+=" "
     }
 
-    for(j=1; j<=(2*i-1); j++)
+    for(j=1; j<=i; j++)
     {
-        num+=i
+        empty+=num;
+        num++;
     }
 
-    num+="\n"
+    empty+="\n"
 
     }
-    document.querySelector(".number-pyramid").innerHTML = "<pre>" + num + "</pre>";
+    document.querySelector(".number-pyramid").innerHTML = "<pre>" + empty + "</pre>";
